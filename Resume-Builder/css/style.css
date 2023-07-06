@@ -1,0 +1,56 @@
+/* Manual Css file */
+.cv .preview-item{
+    position: relative;
+}
+.cv .preview-item .preview-item-val:first-child{
+  display: block;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-top: .5em;
+}
+.cv .preview-item .preview-item-val:nth-child(2){
+  display: block;
+  font-size: .8em;
+  color: rgb(68, 68, 68);
+  font-weight: 500;
+}
+.cv .dsp-experience .experience-list .preview-item .preview-item-val:nth-child(3){
+    display: none;
+}
+.cv .dsp-experience .experience-list .preview-item .preview-item-val:nth-child(4),
+.cv .dsp-education .edu-list .preview-item .preview-item-val:nth-child(3){
+    position: absolute;
+    top: 30%;
+    right: 0;
+    color: rgba(0, 0, 0, .6);
+}
+.cv .dsp-education .edu-list .preview-item .preview-item-val:nth-child(3){
+    top: 45%;
+}
+.cv .dsp-experience .experience-list .preview-item .preview-item-val:nth-child(5),
+.cv .dsp-education .edu-list .preview-item .preview-item-val:nth-child(4){
+    background: #2770e5;
+    color: white; 
+    padding: .2em;
+    border-radius: 10px;
+    position: absolute;
+    right: 30%;
+    top: -3px;
+}
+
+.cv .dsp-experience .experience-list .preview-item .preview-item-val:nth-child(6),
+.cv .dsp-education .edu-list .preview-item .preview-item-val:nth-child(5){
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #2770e5;
+    color: white; 
+    padding: .2em;
+    border-radius: 10px;
+}
+
+.cv .dsp-experience .experience-list .preview-item .preview-item-val:nth-child(7),
+.cv .dsp-education .edu-list .preview-item .preview-item-val:nth-child(6){
+    display: block;
+    margin-top: 1em;
+}

@@ -1,0 +1,45 @@
+body{
+        font-family: "Inter",Arial, Helvetica, sans-serif;
+    }
+    .typing-text p span{
+        position: relative;
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .typing-text p span.correct{
+        color: #56964f;
+    }
+    .typing-text p span.incorrect{
+        color: #cb3439;
+        background: #ffc0cb;
+        outline: 1px solid white;
+        border-radius: 4px;
+    }
+    .typing-text p span.active{
+        color: rgb(92, 92, 92);
+    }
+    .typing-text p span.active::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        opacity: 0;
+        background: #17a2b8;
+        animation: blink 1s ease-in-out infinite;
+    }
+    @keyframes blink {
+        50%{
+            opacity: 1;
+        }
+        
+    }
+    .wrapper .input-field{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: -5;
+        opacity: 0;
+    }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Card</title>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-green-800 flex justify-center items-center h-screen w-[100vw] overflow-hidden">
+    <div class="wrapper w-[770px] p-8 bg-white rounded-xl">
+        <div class="content-box py-8 px-4 border rounded-lg">
+            <div class="typing-text max-h-[255px] overflow-auto">
+                <input type="text" class="w-full input-field " placeholder="Start Typing" autocomplete="off" >
+                <p class="text-slate-500 break-all tracking-wide text-justify">
+                </p>
+            </div>
+            <ul class="list flex mt-8 justify-between items-center text-center border-t py-8 pb-0">
+                <li class="time">
+                    <p>Time Left:
+                        <span class="font-semibold">60s</span>
+                    </p>
+                </li>
+                <li class="mistake">
+                    <p>Mistakes:     
+                        <span class="font-semibold">0</span>
+                    </p>
+                </li>
+                <li class="wpm">
+                    <p>WPM:
+                        <span class="font-semibold">0</span>
+                    </p>
+                </li>
+                <li class="cpm">
+                    <p>CPM:     
+                        <span class="font-semibold">0</span>
+                    </p>
+                </li>
+                <button class="try-again bg-green-500 rounded-lg hover:bg-green-600 transition-colors duration-200  text-white p-2">Try Again</button>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

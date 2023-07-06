@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder - Personal Info</title>
+    <link rel="stylesheet" href="/css/output.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="./js/app.js" defer></script>
+    <script src="./js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/55f803f566.js" crossorigin="anonymous" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    body {
+        font-family: 'Poppins', 'Roboto', Arial, Helvetica, sans-serif;
+    }
+
+    input:focus,
+    input:hover {
+        outline: none;
+    }
+
+    ::placeholder {
+        font-size: .9rem;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <div class="py-6 shadow-md w-full">
+        <nav class="navbar max-w-[1300px] mx-auto bg-white px-4">
+            <div class="flex justify-between items-center">
+                <div class="logo flex items-center justify-between font-semibold">
+                    <img src="images/logo.png" alt="Logo" class="w-6 mr-1">
+                    <span>build <span class="text-blue-500">resume.</span>
+                    </span>
+                </div>
+                <div class="bars w-6 h-[15px] relative">
+                    <div class="bar w-full h-[2px] bg-blue-500 absolute top-[0]"></div>
+                    <div class="bar w-full h-[2px] bg-blue-500 absolute top-[50%] translate-y-[-50%]"></div>
+                    <div class="bar w-full h-[2px] bg-blue-500 absolute bottom-0"></div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <section class="max-w-[1300px] mx-auto mt-12 md:mt-16 px-2">
+        <h1 class="bg-gray-800 text-white uppercase p-2 tracking-widest">about section</h1>
+        <form id="cv-form">
+
+            <section class="about-section border mt-4 py-8 px-2" id="about">
+                <div class="flex gap-4 flex-wrap items-center justify-center">
+                    <div class="first-name w-full md:w-[32.5%]">
+                        <label for="firstname" class="block text-sm font-medium mb-1">First Name</label>
+                        <input onkeyup="generateCV()" type="text" id="firstname" class="border py-1 pl-3 text-sm w-full"
+                            placeholder="e.g. John">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                    <div class="middle-name w-full md:w-[32%]">
+                        <label for="middlename" class="block text-sm font-medium mb-1">Middle Name
+                            <span>(Optional)</span></label>
+                        <input onkeyup="generateCV()" type="text" id="middlename"
+                            class="border py-1 pl-3 text-sm w-full" placeholder="e.g. Herbert">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                    <div class="first-name w-full md:w-[32%]">
+                        <label for="firstname" class="block text-sm font-medium mb-1">Last Name</label>
+                        <input onkeyup="generateCV()" type="text" id="lastname" class="border py-1 pl-3 text-sm w-full"
+                            placeholder="e.g. Doe">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 flex-wrap items-center justify-center mt-6">
+                    <div class="image w-full md:w-[32.5%]">
+                        <label for="image" class="block text-sm font-medium mb-1">Your Image</label>
+                        <input onchange="uploadImg()" type="file" accept="image/*" id="image"
+                            class="w-full border p-2 pl-3 text-xs">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                    <div class="designation w-full md:w-[32%]">
+                        <label for="firstname" class="block text-sm font-medium mb-1">Designation</label>
+                        <input onkeyup="generateCV()" type="text" id="designation"
+                            class="border py-1 pl-3 text-sm w-full" placeholder="e.g. Software Engineer">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                    <div class="address w-full md:w-[32%]">
+                        <label for="address" class="block text-sm font-medium mb-1">Address</label>
+                        <input onkeyup="generateCV()" type="text" id="address" class="border py-1 pl-3 text-sm w-full"
+                            placeholder="e.g. Lake Street 3">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                </div>
+
+
+                <div class="flex gap-4 flex-wrap items-center justify-center mt-6">
+                    <div class="email w-full md:w-[32.5%]">
+                        <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                        <input onkeyup="generateCV()" type="email" id="email" class="w-full border p-2 pl-3 text-xs"
+                            placeholder="e.g. joe@gmail.com">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                    <div class="phone-number w-full md:w-[32%]">
+                        <label for="number" class="block text-sm font-medium mb-1">Phone Number</label>
+                        <input onkeyup="generateCV()" type="tel" id="number" class="border py-1 pl-3 text-sm w-full"
+                            placeholder="e.g. 0222-562-6684">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                    <div class="summary w-full md:w-[32%]">
+                        <label for="summary" class="block text-sm font-medium mb-1">Summary</label>
+                        <input onkeyup="generateCV()" type="text" id="summary" class="border py-1 pl-3 text-sm w-full"
+                            placeholder="e.g. Doe">
+                        <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                    </div>
+                </div>
+            </section>
+
+
+            <div id="achievements-wrapper">
+                <h1 class="bg-gray-800 text-white uppercase p-2 tracking-widest mt-8">acheivements</h1>
+                <div id="achievement-form">
+                    <section class="border mt-4 py-8 px-2" id="achievements">
+                        <div class="flex gap-4 flex-wrap items-center justify-center w-full">
+                            <div class="w-full md:w-[49%]">
+                                <label for="title" class="text-sm font-medium mb-1">Title</label>
+                                <input onkeyup="generateCV()" type="text" id="achievementTitle"
+                                    class="border py-1 pl-3 text-sm w-full achievement-title"
+                                    placeholder="Your Acheivement">
+                                <div class="form-text text-[#ca0b00] text-xs tracking-wide"></div>
+                            </div>
+                            <div class="w-full md:w-[49%]">
+                                <label for="achievementDescription"
+                                    class="block text-sm font-medium mb-1">Description</label>
+                                <input onkeyup="generateCV()" type="text" id="achievementDescription"
+                                    class="border py-1 pl-3 text-sm w-full achievement-description"
+                                    placeholder="About Acheivement">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <button class="py-[1px] px-[7px] my-2 bg-blue-500 text-white text-lg repeater-add rounded">+</button>
+            </div>
+
+
+            <div id="experience-wrapper">
+                <h1 class="bg-gray-800 text-white uppercase p-2 tracking-widest mt-8">experience</h1>
+                <div id="experience-form">
+                    <section class="experience border mt-4 py-8 px-2">
+                        <div class="flex gap-4 flex-wrap items-center justify-center w-full">
+                            <div class="title w-full md:w-[32.5%]">
+                                <label for="experienceTitle" class="text-sm font-medium mb-1">Title</label>
+                                <input onkeyup="generateCV()" type="text" id="experienceTitle"
+                                    class="border py-1 pl-3 text-sm w-full experience-title"
+                                    placeholder="e.g. Frontend Developer">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="company w-full md:w-[32%]">
+                                <label for="experienceCompany" class="block text-sm font-medium mb-1">Company /
+                                    Organization</label>
+                                <input onkeyup="generateCV()" type="text" id="experienceCompany"
+                                    class="border py-1 pl-3 text-sm w-full experience-company"
+                                    placeholder="e.g. Airbnb">
+                                <div class="form-text text-[#ca0b00] text-xs tracking-wide"></div>
+                            </div>
+                            <div class="location w-full md:w-[32%]">
+                                <label for="experienceLocation" class="block text-sm font-medium mb-1">Location</label>
+                                <input onkeyup="generateCV()" type="text" id="experienceLocation"
+                                    class="border py-1 pl-3 text-sm w-full experience-location"
+                                    placeholder="e.g. San Francisco">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 flex-wrap items-center justify-center w-full mt-6">
+                            <div class="start-date w-full md:w-[32.5%]">
+                                <label for="startDate" class="text-sm font-medium mb-1">Start Date</label>
+                                <input onkeyup="generateCV()" type="date" id="startDate"
+                                    class="border py-1 pl-3 text-sm w-full experience-startdate">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="end-date w-full md:w-[32%]">
+                                <label for="endDate" class="block text-sm font-medium mb-1">End Date</label>
+                                <input onkeyup="generateCV()" type="date" id="endDate"
+                                    class="border py-1 pl-3 text-sm w-full experience-enddate"
+                                    placeholder="e.g. Computer Science">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="description w-full md:w-[32%]">
+                                <label for="experienceDescription"
+                                    class="block text-sm font-medium mb-1">Description</label>
+                                <input onkeyup="generateCV()" type="text" id="experienceDescription"
+                                    class="border py-1 pl-3 text-sm w-full experience-description">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <button class="py-[1px] px-[7px] my-2 bg-blue-500 text-white text-lg repeater-add rounded">+</button>
+            </div>
+
+            <div id="education-wrapper">
+                <h1 class="bg-gray-800 text-white uppercase p-2 tracking-widest mt-8">education</h1>
+                <div id="education-form">
+                    <section class="education border mt-4 py-8 px-2">
+                        <div class="flex gap-4 flex-wrap items-center justify-center w-full">
+                            <div class="title w-full md:w-[32.5%]">
+                                <label for="school" class="text-sm font-medium mb-1">School</label>
+                                <input onkeyup="generateCV()" type="text" id="school"
+                                    class="border py-1 pl-3 text-sm w-full education-school"
+                                    placeholder="e.g. Stanford ">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="description w-full md:w-[32%]">
+                                <label for="degree" class="block text-sm font-medium mb-1">Degree</label>
+                                <input onkeyup="generateCV()" type="text" id="degree"
+                                    class="border py-1 pl-3 text-sm w-full education-degree"
+                                    placeholder="e.g. Computer Science">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="city w-full md:w-[32%]">
+                                <label for="city" class="block text-sm font-medium mb-1">City</label>
+                                <input onkeyup="generateCV()" type="text" id="city"
+                                    class="border py-1 pl-3 text-sm w-full education-city" placeholder="e.g. Las Vegas">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 flex-wrap items-center justify-center w-full mt-6">
+                            <div class="start-date w-full md:w-[32.5%]">
+                                <label for="date" class="text-sm font-medium mb-1">Start Date</label>
+                                <input onkeyup="generateCV()" type="date" id="date"
+                                    class="border py-1 pl-3 text-sm w-full education-startdate">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="end-date w-full md:w-[32%]">
+                                <label for="end-date" class="block text-sm font-medium mb-1">End Date</label>
+                                <input onkeyup="generateCV()" type="date" id="end-date"
+                                    class="border py-1 pl-3 text-sm w-full education-enddate"
+                                    placeholder="e.g. Computer Science">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="description w-full md:w-[32%]">
+                                <label for="educationD" class="block text-sm font-medium mb-1">Description</label>
+                                <input onkeyup="generateCV()" type="text" id="educationD"
+                                    class="border py-1 pl-3 text-sm w-full education-description">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <button class="py-[1px] px-[7px] my-2 bg-blue-500 text-white text-lg repeater-add rounded">+</button>
+            </div>
+
+
+            <div id="project-wrapper">
+                <h1 class="bg-gray-800 text-white uppercase p-2 tracking-widest mt-8">projects</h1>
+                <div id="project-form">
+                    <section class="projects border mt-4 py-8 px-2 relative">
+                        <div class="flex gap-4 flex-wrap items-center justify-center w-full">
+                            <div class="title w-full md:w-[32.5%]">
+                                <label for="projectName" class="text-sm font-medium mb-1">Project Name</label>
+                                <input onkeyup="generateCV()" type="text" id="projectName"
+                                    class="border py-1 pl-3 text-sm w-full project-name" placeholder="e.g. Netflix Clone">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="link w-full md:w-[32%]">
+                                <label for="projectLink" class="block text-sm font-medium mb-1">Project link</label>
+                                <input onkeyup="generateCV()" type="text" id="projectLink"
+                                    class="border py-1 pl-3 text-sm w-full project-link" placeholder="e.g. www.netflix.vercel.app">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                            <div class="description w-full md:w-[32%]">
+                                <label for="projectDescription" class="block text-sm font-medium mb-1">Description</label>
+                                <input onkeyup="generateCV()" type="text" id="projectDescription"
+                                    class="border py-1 pl-3 text-sm w-full project-description" placeholder="e.g. How you Build">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <button class="py-[1px] px-[7px] my-2 bg-blue-500 text-white text-lg repeater-add rounded">+</button>
+            </div>
+
+
+            <div id="skill-wrapper">
+                <h1 class="bg-gray-800 text-white uppercase p-2 tracking-widest mt-8">skills</h1>
+                <div id="skill-form">
+                    <section class="skill border mt-4 py-8 px-2 relative">
+                        <div class="flex gap-4 flex-wrap items-center justify-center w-full">
+                            <div class="title w-full">
+                                <label for="skill" class="text-sm font-medium mb-1">Skill</label>
+                                <input onkeyup="generateCV()" type="text" id="skill"
+                                    class="border py-1 pl-3 text-sm w-full skills" placeholder="e.g. JavaScript">
+                                <span class="form-text text-[#ca0b00] text-xs tracking-wide"></span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <button class="py-[1px] px-[7px] my-2 bg-blue-500 text-white text-lg repeater-add rounded">+</button>
+            </div>
+        </form>
+
+
+        <section class="cv my-8">
+            <h1 class="text-5xl text-center">Your Resume</h1>
+            <div class="flex mt-8 gap-4 m-auto">
+                <div class="left w-full">
+                    <div class="img">
+                        <img src="" alt="" class="dsp-img rounded-[50%] w-[12rem] h-[11.5rem] ml-2 md:ml-16 mb-2">
+                        <div class="detail">
+                            <div class="dsp-phone mt-2">
+                                <i class="fa-solid fa-phone"></i>
+                                <span></span>
+                            </div>
+                            <div class="dsp-email mt-2">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span></span>
+                            </div>
+                            <div class="dsp-location mt-2">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dsp-skills mt-4">
+                        <h2 class="bg-blue-500 tracking-wider py-1 rounded font-medium uppercase w-full text-center text-white">skills</h2>
+                        <ul class="skills-list">
+                            
+                        </ul>
+                    </div>
+                    <div class="dsp-education mt-4">
+                        <h2 class="bg-blue-500 tracking-wider py-1 rounded font-medium uppercase w-full text-center text-white">education</h2>
+                        <ul class="edu-list">
+
+                        </ul>
+                    </div>
+                    <div class="dsp-achievement mt-4">
+                        <h2 class="bg-blue-500 tracking-wider py-1 rounded font-medium uppercase w-full text-center text-white">achievement</h2>
+                        <ul class="achievement-list">
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="right w-full">
+                    <div class="name">
+                        <h1 class="dsp-name text-4xl text-center italic font-medium mt-2">
+
+                        </h1>
+                        <p class="dsp-designation tracking-wide text-center text-blue-700 text-xl uppercase my-4"></p>
+                        <p class="dsp-summary mb-4"></p>
+                    </div>
+                    <div class="dsp-projects mb-4">
+                        <h2 class="bg-blue-500 tracking-wider py-1 rounded font-medium uppercase w-full text-center text-white mb-2">Projects</h2>
+                        <ul class="project-list">
+
+                        </ul>
+                    </div>
+                    <div class="dsp-experience mt-4">
+                        <h2 class="bg-blue-500 tracking-wider py-1 rounded font-medium uppercase w-full text-center text-white mb-2 ">experience</h2>
+                        <ul class="experience-list">
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <button class="print-btn p-2 bg-blue-500 text-white my-4 rounded hover:bg-blue-600 transition-all duration-100" onclick="printCV()">Print CV</button>
+    </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+    --roose-brown: rgb(172,142,104);
+    --tangerine: rgb(129, 127, 255);
+    --tangerine-hover: rgb(111, 108, 255);
+    --gray: rgb(108,108,112);
+    --orange: rgb(255, 176, 56);
+    --green: rgb(40,205,65);
+}
+*{
+    -webkit-tap-highlight-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+body{
+    background: #ebebeb;
+    color: #333;
+}
+button{
+    background: transparent;
+}
+textarea ,
+button{
+    border: none;
+    outline: none;
+}
+.container{
+    max-width: 1400px;
+    margin-inline: auto;
+    margin-block: 1em;
+    padding-inline: .5rem;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.container .add{
+    font-size: 1.5em;
+    color: white;
+    background: #333;
+    padding: .3rem .85rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .2s all;
+    position: fixed;
+    right: 8%;
+    bottom: 30px;
+    z-index: 3;
+}
+.container .add:hover{
+    rotate: 180deg;
+}
+.container span{
+    font-size: 2.3rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+}
+.container .flex .buttons button{
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 100px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+/* Buttons Colors */
+.container .buttons .brown,
+.container .items .card.brown{
+    background:var(--roose-brown);
+}
+.container .buttons .tangerine,
+.container .items .card.tangerine{
+    background: var(--tangerine);
+}
+.container .buttons .gray,
+.container .items .card.gray{
+    background: var(--gray);
+}
+.container .buttons .orange,
+.container .items .card.orange{
+    background-color: var(--orange);
+}
+.container .buttons .green,
+.container .items .card.green{
+    background-color: var(--green);
+}
+.flex .items{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+.flex .card {
+    max-width: 300px;
+    border-radius: 5px;
+    color: whitesmoke;
+    padding: .5em;
+    position: relative;
+    width: 100%;
+    word-wrap: break-word;
+}
+.flex .buttons{
+    display: flex;
+    gap: 1em;
+    margin-left: .7em;
+    position: fixed;
+    bottom:40px;
+    z-index: 3;
+}
+.flex .card .delete{
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background: rgb(250, 49, 49);
+    color: #ebebeb;
+    padding: .1em .5em;
+    border-radius: 100px;
+    cursor: pointer;
+}
+.flex .card .delete i{
+    font-size: .75em;
+}
+.flex .card .flex {
+    margin-block: .6rem;
+    justify-content: space-between;
+    margin-inline-end: .5rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex .card .flex button{
+    font-size: 1.2rem;
+}
+i{
+    color: white;
+    font-size: 1rem;
+}
+/* Alert and Overlay */
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    backdrop-filter: blur(2px);
+    display: none;
+}
+.overlay.show{
+    display: flex;
+}
+textarea{
+    resize: none;
+}
+.overlay .addText{
+    max-width: 500px;
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .1);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15%;
+}
+.addText h4{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-block:.5em;
+}
+.addText textarea{
+    border: 1px solid rgba(128, 128, 128,.4);
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 5px;
+}
+.addText button{
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+    margin-block:1.5em .5em;
+    background: var(--tangerine-hover);
+    color: white;
+    padding-block: .5em;
+    border-radius: 5px;
+    transition: .2s background ease-in-out;
+}
+.addText button:hover{
+    background:var(--tangerine);
+    transition: .2s background ease-in-out;
+}
+.alert{
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: .4em;
+    border-radius: 5px;
+    display: none;
+}
+.alert.danger,
+.alert.success{
+    display: block;
+    color: white;
+}
+.alert.danger{
+    background: rgb(255, 83, 83);
+}
+.alert.success{
+    background: green;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <button class="add">+</button>
+        <span>Notes</span>
+        <div class="flex">
+            <div class="buttons">
+                <button class="brown"></button>
+                <button class="tangerine"></button>
+                <button class="gray"></button>
+                <button class="orange"></button>
+                <button class="green"></button>   
+            </div>
+            <div class="items"></div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="addText">
+            <h4 class="target">Writting a Journal reminds your goals</h4>
+                <textarea placeholder="Add notes*" required class="target"></textarea>
+                <button id="addNote">Add notes</button>
+        </div>
+    </div>
+
+
+    <div class="alert"></div>
+</body>
+</html>

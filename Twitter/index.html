@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter - Whats Happening</title>
+    <link rel="stylesheet" href="./styles/output.css">
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/auth.js" defer type="module"></script>
+</head>
+
+<body class="bg-zinc-200">
+
+    <div class="loader flex items-center justify-center fixed w-full h-screen z-10 bg-gray-100">
+        <svg class="w-[10%]" viewBox="0 0 24 24" aria-hidden="true">
+            <g>
+                <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                </path>
+            </g>
+        </svg>
+    </div>
+
+    <div
+        class="flex flex-col md:flex-row md:items-center md:justify-between max-w-[1000px] mx-auto w-full px-2 h-auto md:h-screen overflow-hidden md:overflow-auto">
+        
+        <svg class="w-[20%] md:w-[40%] my-12" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>
+
+        <div class="form px-2">
+            <h1 class="text-4xl md:text-7xl font-bold text-gray-400">Happening now</h1>
+            <div class="max-w-[400px]">
+                <h3 class="text-3xl md:text-3xl font-bold text-gray-600 my-4 md:mb-6">Join today</h3>
+                <div class="buttons  flex flex-col items-center justify-center text-center">
+                    <button class="signInGoogle py-2 px-4 border text-center rounded-2xl w-full flex items-center justify-center gap-4 text-lg"><ion-icon
+                            name="logo-google"></ion-icon> Sign up with Google</button>
+                    <button class="signInTwitter py-2 px-4 border text-center mt-4 rounded-2xl w-full flex items-center justify-center gap-4 text-lg"><ion-icon
+                            name="logo-twitter"></ion-icon> Sign in with Twitter</button>
+                </div>
+
+                <p class="text-center my-2">or</p>
+                <button
+                    class="createNewAccount bg-blue-500 text-white rounded-2xl py-2 px-4 text-center block w-full hover:bg-blue-600">Create
+                    account</button>
+
+                <p class="text-sm mt-2">By signing up, you agree to the <a href="" class="text-blue-500">Terms of
+                        Service</a> and <a href="" class="text-blue-500">Privacy Policy</a>, including <a href=""
+                        class="text-blue-500">Cookie Use.
+                    </a></p>
+
+                <p class="mt-5 font-semibold text-xl">Already have an account</p>
+                <button
+                    class="signIn text-blue-500 font-semibold block py-2 px-4 border text-center mt-4 rounded-2xl w-full border-gray-500">Sign
+                    in</button>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+ 
+    
+</body>
+
+</html>

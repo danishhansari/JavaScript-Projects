@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+body{
+    background-image: linear-gradient(to left bottom, #dc0bc0af, #ff0073b5, #ff6822d3, #e2aa11b2, #8fcf06c8);
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+.tab-btn{
+    padding-bottom: 1em;
+}
+.tab-active{
+    border-bottom: 4px solid tomato;
+}
+.tab-body{
+    display: none;
+}
+.tab-body-active{
+    display: block;
+}

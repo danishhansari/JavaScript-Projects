@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHero</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+</head>
+<body class="min-h-screen flex items-center justify-center relative">
+    <section class="wrapper bg-gray-800 w-[70%] rounded shadow-lg">
+        <nav class="nav w-full flex justify-between items-center px-4 py-4">
+            <div class="logo w-full">
+                <a href="#" class="text-white text-2xl font-semibold">Super<span class="text-red-500">Hero</span></a>
+            </div>
+            <form class="form w-full">
+                <span class="relative">
+                    <input type="text" name="search" placeholder="Search Your hero..." class="bg-transparent border-2 border-slate-500 p-2 rounded-[100px] focus:outline-none text-white text-lg pl-4 w-full" autocomplete="off">
+                    <button type="submit" class="absolute right-5 top-[50%] translate-y-[-50%]"><i class="fa fa-search text-slate-500"></i></button>
+                </span>
+                <div class="search-list absolute h-[100px] overflow-auto w-[350px] top-[18%] p-2"></div>
+            </form>
+        </nav>
+
+        <main class="main h-[70vh] p-6 flex justify-start">
+            
+            <!-- Banner Image -->
+            <div class="img w-[70%]"></div>
+
+            <!-- Information Render -->
+            <div class="info w-full">
+                <div class="hero-name text-white text-3xl uppercase"></div>
+
+                <!-- All the Tab Button -->
+                <div class="tab my-6 mb-8 w-[90%] flex justify-between items-center font-semibold text-white border-b border-slate-500">
+                    <button class="tab-btn uppercase tab-active h-full" data-id="1">powerstats</button>
+                    <button class="tab-btn uppercase" data-id="2">biography</button>
+                    <button class="tab-btn uppercase" data-id="3">appearance</button>
+                    <button class="tab-btn uppercase" data-id="4">connections</button>
+                </div>
+
+
+                <!-- PowerStats Stars -->
+                <div class="powerstat tab-body"></div>
+                <!-- PowerStats End -->
+             
+
+                <!-- Biography Starts -->
+                <div class="biography tab-body"></div>
+                <!-- Biography End -->
+
+                <!-- Appearance Starts -->
+                <div class="appearance w-[90%] tab-body"></div>
+                <!-- Appearance Ends -->
+
+
+                <!-- Connections Starts -->
+                <div class="connections tab-body"></div>
+
+            </div>
+        </main>
+    </section>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" type="module"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="filterbar">
+            <span>
+                <input type="text" placeholder="Dogecoin to the Moon...">
+                <i class="fa fa-search"></i>
+            </span>
+            <i class="fa fa-bell"></i>
+        </div>
+        
+        <div class="heading">
+            <h3>Latest News</h3>
+            <button>See All <i class="fa fa-arrow-right"></i></button>
+        </div>
+
+        <div class="card-container">
+            <div class="overlay"></div>
+            <div class="cards"></div>
+        </div>
+
+
+        <div class="category">  
+            <button class="active">Health</button>
+            <button>Technology</button>
+            <button>Finance</button>
+            <button>Arts</button>
+            <button>Sports</button>
+            <button>Business</button>
+        </div>
+
+        <div class="full-cards"></div>
+
+
+    </div>
+
+    <nav class="mobile-nav">
+        <div class="home active">
+            <i class="fa fa-house"></i>
+            <p>Home</p>
+        </div>
+        <div class="favorite">
+            <i class="fa-regular fa-heart"></i>
+            <p>Favorite</p>
+        </div>
+        <div class="profile">
+            <i class="fa-regular fa-face-smile"></i>
+            <p>Profile</p>
+        </div>
+    </nav>
+</body>
+</html>
